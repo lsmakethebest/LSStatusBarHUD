@@ -73,12 +73,12 @@
                   symbolName = "-[LSStatusBarHUD endShowWithAutoHide:delay:]"
                   moduleName = "LSStatusBarHUDExample"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liusong/Desktop/%E4%BB%A3%E7%A0%81/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
-                  timestampString = "502801522.01295"
+                  urlString = "file:///Users/liusong/Desktop/github/LSStatusBarHUD/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
+                  timestampString = "502804595.136731"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "246"
-                  endingLineNumber = "246"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
                   offsetFromSymbolStart = "108">
                </Location>
                <Location
@@ -88,12 +88,12 @@
                   symbolName = "__44-[LSStatusBarHUD endShowWithAutoHide:delay:]_block_invoke"
                   moduleName = "LSStatusBarHUDExample"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liusong/Desktop/%E4%BB%A3%E7%A0%81/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
-                  timestampString = "502801522.014857"
+                  urlString = "file:///Users/liusong/Desktop/github/LSStatusBarHUD/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
+                  timestampString = "502804595.137987"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "247"
-                  endingLineNumber = "247"
+                  startingLineNumber = "229"
+                  endingLineNumber = "229"
                   offsetFromSymbolStart = "20">
                </Location>
             </Locations>
@@ -121,12 +121,12 @@
                   symbolName = "-[LSStatusBarHUD endShowWithAutoHide:delay:]"
                   moduleName = "LSStatusBarHUDExample"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liusong/Desktop/%E4%BB%A3%E7%A0%81/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
-                  timestampString = "502801522.018308"
+                  urlString = "file:///Users/liusong/Desktop/github/LSStatusBarHUD/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
+                  timestampString = "502804595.141274"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "248"
-                  endingLineNumber = "248"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
                   offsetFromSymbolStart = "272">
                </Location>
                <Location
@@ -136,57 +136,57 @@
                   symbolName = "__44-[LSStatusBarHUD endShowWithAutoHide:delay:]_block_invoke"
                   moduleName = "LSStatusBarHUDExample"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liusong/Desktop/%E4%BB%A3%E7%A0%81/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
-                  timestampString = "502801522.0196"
+                  urlString = "file:///Users/liusong/Desktop/github/LSStatusBarHUD/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
+                  timestampString = "502804595.142459"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "248"
-                  endingLineNumber = "248"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
                   offsetFromSymbolStart = "120">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.107"
+                  symbolName = "__copy_helper_block_.105"
                   moduleName = "LSStatusBarHUDExample"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liusong/Desktop/%E4%BB%A3%E7%A0%81/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
-                  timestampString = "502801522.021009"
+                  urlString = "file:///Users/liusong/Desktop/github/LSStatusBarHUD/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
+                  timestampString = "502804595.143634"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "248"
-                  endingLineNumber = "248"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
                   offsetFromSymbolStart = "52">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.108"
+                  symbolName = "__destroy_helper_block_.106"
                   moduleName = "LSStatusBarHUDExample"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liusong/Desktop/%E4%BB%A3%E7%A0%81/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
-                  timestampString = "502801522.023154"
+                  urlString = "file:///Users/liusong/Desktop/github/LSStatusBarHUD/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
+                  timestampString = "502804595.144806"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "248"
-                  endingLineNumber = "248"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
                   offsetFromSymbolStart = "28">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__44-[LSStatusBarHUD endShowWithAutoHide:delay:]_block_invoke.110"
+                  symbolName = "__44-[LSStatusBarHUD endShowWithAutoHide:delay:]_block_invoke.108"
                   moduleName = "LSStatusBarHUDExample"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liusong/Desktop/%E4%BB%A3%E7%A0%81/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
-                  timestampString = "502801522.024451"
+                  urlString = "file:///Users/liusong/Desktop/github/LSStatusBarHUD/LSStatusBarHUDExample/LSStatusBarHUDExample/LSStatusBarHUD/LSStatusBarHUD.m"
+                  timestampString = "502804595.145978"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "249"
-                  endingLineNumber = "249"
+                  startingLineNumber = "231"
+                  endingLineNumber = "231"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>

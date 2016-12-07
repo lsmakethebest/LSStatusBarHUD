@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKN-0V-TBv">
-                                <rect key="frame" x="110" y="324" width="108" height="30"/>
+                                <rect key="frame" x="115" y="351" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="自定义提示样式"/>
                                 <connections>
@@ -62,11 +62,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgJ-FE-6Bw">
-                                <rect key="frame" x="100" y="377" width="127" height="30"/>
+                                <rect key="frame" x="92" y="411" width="127" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="自定义loading样式"/>
                                 <connections>
                                     <action selector="customLoading:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7H-wO-SZI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TQ-Pz-c7R">
+                                <rect key="frame" x="123" y="306" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="新版qq样式"/>
+                                <connections>
+                                    <action selector="qq:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZ9-71-AeL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1991" y="-729"/>
+            <point key="canvasLocation" x="-2246" y="-733"/>
         </scene>
     </scenes>
 </document>

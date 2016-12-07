@@ -57,7 +57,13 @@
      [CustomHUD showLoading:@"正在疯狂加载中..."];
     
 }
+- (IBAction)qq:(id)sender {
     
+    NSMutableAttributedString *a= [LSStatusBarHUD createAttributedText:@"已发送" color:[UIColor blackColor] font:[UIFont systemFontOfSize:16]];
+    [LSStatusBarHUD showMessageAndImage:a image:[UIImage imageNamed:@"success.png"] backgroundColor:[UIColor colorWithWhite:0.8 alpha:1]];
+    
+}
+
 
 
 @end
