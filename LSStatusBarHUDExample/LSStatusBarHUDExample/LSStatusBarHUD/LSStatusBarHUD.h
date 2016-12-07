@@ -41,12 +41,14 @@
     
 // 映客提示效果只在中间显示文字
 + (void)showMessage:(NSString *)message;
-+ (void)showMessage:(NSMutableAttributedString*)attributedMessage backgroundColor:(UIColor*)backgroundColor ;
++ (void)showMessage:(NSMutableAttributedString*)attributedMessage backgroundColor:(UIColor*)backgroundColor;
 
     
 //快速创建富文本
 +(NSMutableAttributedString*)createAttributedText:(NSString*)text color:(UIColor*)color font:(UIFont*)font;
-    
+
+
+
 @end
 
 
