@@ -32,8 +32,8 @@
 ![image](https://github.com/lsmakethebest/LSStatusBarHUD/blob/master/images/error.PNG)
 ##新版qq样式使用方法
 	- (IBAction)qq:(id)sender {
-	    NSMutableAttributedString *a= [LSStatusBarHUD createAttributedText:@"已发送" color:		[UIColor blackColor] font:[UIFont systemFontOfSize:16]];
-	    [LSStatusBarHUD showMessageAndImage:a image:[UIImage imageNamed:@"success.png"] 		backgroundColor:[UIColor colorWithWhite:0.8 alpha:1]];
+	    NSMutableAttributedString *a= [LSStatusBarHUD createAttributedText:@"已发送" color:[UIColor blackColor] font:[UIFont systemFontOfSize:16]];
+	 [LSStatusBarHUD showMessageAndImage:a image:[UIImage imageNamed:@"success.png"] backgroundColor:[UIColor colorWithWhite:0.8 alpha:1]];
 	}
 ![image](https://github.com/lsmakethebest/LSStatusBarHUD/blob/master/images/qq.PNG)	
 ##映客效果使用方法
