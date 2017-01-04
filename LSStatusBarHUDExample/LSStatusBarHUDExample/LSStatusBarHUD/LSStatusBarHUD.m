@@ -45,7 +45,6 @@
 // QQ音乐加载效果 带图片或loading可以自定义  images如果传空则用默认的loading效果
 + (void)showLoading:(NSMutableAttributedString *)attributedLoading images:(NSArray*)images backgroundColor:(UIColor*)backgroundColor
 {
-
     [LSStatusBarHUD hideLoading];
     //在init里设置背景色frame无效
     LSStatusBarHUD *hud=[self createWindowWithAutoHide:NO];
@@ -74,25 +73,16 @@
 
 
 
-
 +(void)showLoading:(NSString *)loading
-    {
-        
+{
         NSMutableAttributedString *attributedString=[self createAttributedText:loading color:LSStatusBarHUDDefaultTitleColor font:LSStatusBarHUDDefaultTitleFont];
         [self showLoading:attributedString images:nil backgroundColor:LSStatusBarHUDDefaultLoadingBackgroundColor];
-        
-    }
-
-
-    
-
-
+}
 
 
 //  QQ音乐错误效果 带图片可以自定义
 +(void)showMessageAndImage:(NSMutableAttributedString *)attributedMessage image:(UIImage *)image backgroundColor:(UIColor *)backgroundColor
-    {
-        
+{
          [LSStatusBarHUD hideLoading];
         //在init里设置背景色frame无效
         LSStatusBarHUD *hud=[self createWindowWithAutoHide:YES];
@@ -109,7 +99,7 @@
         UILabel *label=[self createLabelWithAttributedText:attributedMessage textAlignment:NSTextAlignmentLeft];
         label.frame=CGRectMake(x, 20,LSStatusBarHUDScreenWidth-x, 44);
         [hud addSubview:label];
-    }
+}
 
 
 + (void)showMessageAndImage:(NSString *)message
@@ -124,7 +114,6 @@
 #pragma mark - 不带图片   映客提示效果只在中间显示个文字
 +(void)showMessage:(NSMutableAttributedString *)attributedMessage backgroundColor:(UIColor *)backgroundColor
 {
-    
     [LSStatusBarHUD hideLoading];
         //在init里设置背景色frame无效
         LSStatusBarHUD *hud=[self createWindowWithAutoHide:YES];
@@ -137,7 +126,7 @@
 
 
 +(void)showMessage:(NSString *)message
-    {
+{
         LSStatusBarHUD *hud=[self createWindowWithAutoHide:YES];
         hud.backgroundColor=LSStatusBarHUDDefaultHUDBackgroundColor;
         NSMutableAttributedString *attributedString=[[NSMutableAttributedString alloc]initWithString:message];
@@ -148,19 +137,18 @@
         label.frame=CGRectMake(0, 20, LSStatusBarHUDScreenWidth, 44);
         [hud addSubview:label];
         
-    }
-
+}
 
 
 #pragma mark - 辅助类
 +(NSMutableAttributedString*)createAttributedText:(NSString*)text color:(UIColor*)color font:(UIFont*)font
 {
-    
     NSMutableAttributedString *attributedString=[[NSMutableAttributedString alloc]initWithString:text];
     [attributedString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, attributedString.length)];
     [attributedString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, attributedString.length)];
     return attributedString;
 }
+
 
 +(UILabel*)createLabelWithAttributedText:(NSMutableAttributedString*)attributedText textAlignment:(NSTextAlignment)textAlignment
 {
