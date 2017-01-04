@@ -29,9 +29,8 @@
 - (IBAction)yktip:(id)sender
     {
         
-    [LSStatusBarHUD showMessage:@"正在努力加载数据..."];
+    [LSStatusBarHUD showMessage:@"提示提示"];
         
-    
     
 }
 
@@ -61,6 +60,7 @@
 - (IBAction)qq:(id)sender {
     
     NSMutableAttributedString *a= [LSStatusBarHUD createAttributedText:@"已发送" color:[UIColor blackColor] font:[UIFont systemFontOfSize:16]];
+    
     [LSStatusBarHUD showMessageAndImage:a image:[UIImage imageNamed:@"success.png"] backgroundColor:[UIColor colorWithWhite:0.8 alpha:1]];
     
 }
