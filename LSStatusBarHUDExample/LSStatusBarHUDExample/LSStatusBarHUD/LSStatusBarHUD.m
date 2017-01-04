@@ -42,7 +42,7 @@
 // QQ音乐加载效果 带图片或loading可以自定义  images如果传空则用默认的loading效果
 + (void)showLoading:(NSMutableAttributedString *)attributedLoading images:(NSArray*)images backgroundColor:(UIColor*)backgroundColor
 {
-    //    [LSStatusBarHUD hideLoading];
+    [LSStatusBarHUD hideLoading];
     //在init里设置背景色frame无效
     LSStatusBarHUD *hud=[self createWindowWithAutoHide:NO];
     hud.isLoading=YES;
@@ -72,6 +72,7 @@
 
 +(void)showLoading:(NSString *)loading
 {
+    [LSStatusBarHUD hideLoading];
     NSMutableAttributedString *attributedString=[self createAttributedText:loading color:LSStatusBarHUDDefaultTitleColor font:LSStatusBarHUDDefaultTitleFont];
     [self showLoading:attributedString images:nil backgroundColor:LSStatusBarHUDDefaultLoadingBackgroundColor];
 }
@@ -80,7 +81,7 @@
 //  QQ音乐错误效果 带图片可以自定义
 +(void)showMessageAndImage:(NSMutableAttributedString *)attributedMessage image:(UIImage *)image backgroundColor:(UIColor *)backgroundColor
 {
-    //         [LSStatusBarHUD hideLoading];
+    [LSStatusBarHUD hideLoading];
     //在init里设置背景色frame无效
     LSStatusBarHUD *hud=[self createWindowWithAutoHide:YES];
     hud.backgroundColor=backgroundColor;
@@ -101,7 +102,7 @@
 
 + (void)showMessageAndImage:(NSString *)message
 {
-    
+    [LSStatusBarHUD hideLoading];
     NSMutableAttributedString *attributedString=[self createAttributedText:message color:LSStatusBarHUDDefaultTitleColor font:LSStatusBarHUDDefaultTitleFont];
     [self showMessageAndImage:attributedString image:nil backgroundColor:LSStatusBarHUDDefaultHUDAndImageBackgroundColor];
     
@@ -111,7 +112,7 @@
 #pragma mark - 不带图片   映客提示效果只在中间显示个文字
 +(void)showMessage:(NSMutableAttributedString *)attributedMessage backgroundColor:(UIColor *)backgroundColor
 {
-    //    [LSStatusBarHUD hideLoading];
+    [LSStatusBarHUD hideLoading];
     //在init里设置背景色frame无效
     LSStatusBarHUD *hud=[self createWindowWithAutoHide:YES];
     hud.backgroundColor=backgroundColor;
@@ -124,6 +125,7 @@
 
 +(void)showMessage:(NSString *)message
 {
+    [LSStatusBarHUD hideLoading];
     LSStatusBarHUD *hud=[self createWindowWithAutoHide:YES];
     hud.backgroundColor=LSStatusBarHUDDefaultHUDBackgroundColor;
     NSMutableAttributedString *attributedString=[[NSMutableAttributedString alloc]initWithString:message];
