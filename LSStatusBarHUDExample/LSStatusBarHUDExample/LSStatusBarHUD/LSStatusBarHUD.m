@@ -40,8 +40,41 @@
         }
         return self;
     }
+
+
+// QQ音乐加载效果 带图片或loading可以自定义  images如果传空则用默认的loading效果
++ (void)showLoading:(NSMutableAttributedString *)attributedLoading images:(NSArray*)images backgroundColor:(UIColor*)backgroundColor
+{
+
+    [LSStatusBarHUD hideLoading];
+    //在init里设置背景色frame无效
+    LSStatusBarHUD *hud=[self createWindowWithAutoHide:NO];
+    hud.isLoading=YES;
+    hud.backgroundColor=backgroundColor;
+    CGRect frame=CGRectMake(LSStatusBarHUDLeftMargin, (44- LSStatusBarHUDImageWidth)/2+20,LSStatusBarHUDImageWidth, LSStatusBarHUDImageWidth);
+    if (images==nil||images.count==0) {
+        UIActivityIndicatorView *activityIndicatorView =[[UIActivityIndicatorView alloc]initWithFrame:frame];
+        [activityIndicatorView startAnimating];
+        [hud addSubview:activityIndicatorView];
+    }else{
+        UIImageView *imageView=[[UIImageView alloc]initWithFrame:frame];
+        imageView.animationImages=images;
+        imageView.animationRepeatCount=MAXFLOAT;
+        imageView.animationDuration=LSStatusBarHUDImageDuration*images.count;
+        [hud addSubview:imageView];
+        [imageView startAnimating];
+        
+    }
+    CGFloat x=LSStatusBarHUDLeftMargin+LSStatusBarHUDImageWidth+LSStatusBarHUDMiddleMargin;
+    UILabel *label=[self createLabelWithAttributedText:attributedLoading textAlignment:NSTextAlignmentLeft];
+    label.frame=CGRectMake(x, 20,LSStatusBarHUDScreenWidth-x, 44);
+    [hud addSubview:label];
     
-    // QQ音乐加载效果 带图片或loading可以自定义  images如果传空则用默认的loading效果
+}
+
+
+
+
 +(void)showLoading:(NSString *)loading
     {
         
@@ -52,62 +85,15 @@
 
 
     
-+ (void)showLoading:(NSMutableAttributedString *)attributedLoading images:(NSArray*)images backgroundColor:(UIColor*)backgroundColor
-    {
-        
-        //在init里设置背景色frame无效
-        LSStatusBarHUD *hud=[self createWindowWithAutoHide:NO];
-        hud.isLoading=YES;
-        hud.backgroundColor=backgroundColor;
-        CGRect frame=CGRectMake(LSStatusBarHUDLeftMargin, (44- LSStatusBarHUDImageWidth)/2+20,LSStatusBarHUDImageWidth, LSStatusBarHUDImageWidth);
-        if (images==nil||images.count==0) {
-            UIActivityIndicatorView *activityIndicatorView =[[UIActivityIndicatorView alloc]initWithFrame:frame];
-            [activityIndicatorView startAnimating];
-            [hud addSubview:activityIndicatorView];
-        }else{
-            UIImageView *imageView=[[UIImageView alloc]initWithFrame:frame];
-            imageView.animationImages=images;
-            imageView.animationRepeatCount=MAXFLOAT;
-            imageView.animationDuration=LSStatusBarHUDImageDuration*images.count;
-            [hud addSubview:imageView];
-            [imageView startAnimating];
-        
-        }
-        CGFloat x=LSStatusBarHUDLeftMargin+LSStatusBarHUDImageWidth+LSStatusBarHUDMiddleMargin;
-        UILabel *label=[self createLabelWithAttributedText:attributedLoading textAlignment:NSTextAlignmentLeft];
-        label.frame=CGRectMake(x, 20,LSStatusBarHUDScreenWidth-x, 44);
-        [hud addSubview:label];
 
-    }
-#pragma mark - 辅助类
-+(NSMutableAttributedString*)createAttributedText:(NSString*)text color:(UIColor*)color font:(UIFont*)font
-{
-    
-    NSMutableAttributedString *attributedString=[[NSMutableAttributedString alloc]initWithString:text];
-    [attributedString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, attributedString.length)];
-    [attributedString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, attributedString.length)];
-    return attributedString;
-}
 
-+(UILabel*)createLabelWithAttributedText:(NSMutableAttributedString*)attributedText textAlignment:(NSTextAlignment)textAlignment
-    {
-        UILabel *label=[[UILabel alloc]init];
-        label.attributedText=attributedText;
-        label.textAlignment=textAlignment;
-        return label;
-        
-    }
+
+
 //  QQ音乐错误效果 带图片可以自定义
-+ (void)showMessageAndImage:(NSString *)message
-{
-    
-    NSMutableAttributedString *attributedString=[self createAttributedText:message color:LSStatusBarHUDDefaultTitleColor font:LSStatusBarHUDDefaultTitleFont];
-    [self showMessageAndImage:attributedString image:nil backgroundColor:LSStatusBarHUDDefaultHUDAndImageBackgroundColor];
-    
-}
-    +(void)showMessageAndImage:(NSMutableAttributedString *)attributedMessage image:(UIImage *)image backgroundColor:(UIColor *)backgroundColor
++(void)showMessageAndImage:(NSMutableAttributedString *)attributedMessage image:(UIImage *)image backgroundColor:(UIColor *)backgroundColor
     {
         
+         [LSStatusBarHUD hideLoading];
         //在init里设置背景色frame无效
         LSStatusBarHUD *hud=[self createWindowWithAutoHide:YES];
         hud.backgroundColor=backgroundColor;
@@ -124,9 +110,22 @@
         label.frame=CGRectMake(x, 20,LSStatusBarHUDScreenWidth-x, 44);
         [hud addSubview:label];
     }
+
+
++ (void)showMessageAndImage:(NSString *)message
+{
     
+    NSMutableAttributedString *attributedString=[self createAttributedText:message color:LSStatusBarHUDDefaultTitleColor font:LSStatusBarHUDDefaultTitleFont];
+    [self showMessageAndImage:attributedString image:nil backgroundColor:LSStatusBarHUDDefaultHUDAndImageBackgroundColor];
+    
+}
+
+
+#pragma mark - 不带图片   映客提示效果只在中间显示个文字
 +(void)showMessage:(NSMutableAttributedString *)attributedMessage backgroundColor:(UIColor *)backgroundColor
 {
+    
+    [LSStatusBarHUD hideLoading];
         //在init里设置背景色frame无效
         LSStatusBarHUD *hud=[self createWindowWithAutoHide:YES];
         hud.backgroundColor=backgroundColor;
@@ -136,7 +135,7 @@
         
 }
 
-    // 映客提示效果只在中间显示个文字
+
 +(void)showMessage:(NSString *)message
     {
         LSStatusBarHUD *hud=[self createWindowWithAutoHide:YES];
@@ -152,7 +151,28 @@
     }
 
 
+
+#pragma mark - 辅助类
++(NSMutableAttributedString*)createAttributedText:(NSString*)text color:(UIColor*)color font:(UIFont*)font
+{
     
+    NSMutableAttributedString *attributedString=[[NSMutableAttributedString alloc]initWithString:text];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, attributedString.length)];
+    [attributedString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, attributedString.length)];
+    return attributedString;
+}
+
++(UILabel*)createLabelWithAttributedText:(NSMutableAttributedString*)attributedText textAlignment:(NSTextAlignment)textAlignment
+{
+    UILabel *label=[[UILabel alloc]init];
+    label.attributedText=attributedText;
+    label.textAlignment=textAlignment;
+    return label;
+    
+}
+
+
+
 +(instancetype)createWindowWithAutoHide:(BOOL)autoHide
     {
         UIViewController *vc= [UIApplication sharedApplication].keyWindow.rootViewController;
@@ -186,8 +206,8 @@
         return hud;
         
     }
-    +(void)hideLoading
-    {
++(void)hideLoading
+{
         
         UIViewController *vc= [UIApplication sharedApplication].keyWindow.rootViewController;
         [UIApplication sharedApplication].keyWindow.rootViewController.ls_tempWindow=nil;
@@ -196,9 +216,9 @@
             [hud endShowWithAutoHide:NO delay:0.0f];
         }
         
-    }
-    -(void)beginShowWithAutoHide:(BOOL)autoHide exist:(BOOL)exist
-    {
+}
+-(void)beginShowWithAutoHide:(BOOL)autoHide exist:(BOOL)exist
+{
         
         CGRect frame=self.frame;
         frame.origin.y=0;
@@ -217,7 +237,10 @@
                 [self endShowWithAutoHide:autoHide delay:LSStatusBarHUDDelayTime];
             }
         }];
-    }
+}
+
+
+
 -(void)endShowWithAutoHide:(BOOL)autoHide delay:(CGFloat)delay
     {
       

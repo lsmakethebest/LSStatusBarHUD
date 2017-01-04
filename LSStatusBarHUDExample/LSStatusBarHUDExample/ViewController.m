@@ -30,6 +30,7 @@
     {
         
     [LSStatusBarHUD showMessage:@"正在努力加载数据..."];
+        
     
     
 }
