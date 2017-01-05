@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'LSStatusBarHUD'
-s.version      = '1.0.0'
+s.version      = '1.0.1'
 s.summary      = '一个类似映客，qq音乐，新版qq状态栏上的提示效果-可以按自己的需求自定义样式'
 s.homepage     = 'https://github.com/lsmakethebest/LSStatusBarHUD'
 s.license      = 'MIT'
