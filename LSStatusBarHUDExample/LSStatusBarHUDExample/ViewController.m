@@ -43,11 +43,7 @@
 }
 - (IBAction)loading:(id)sender {
     [LSStatusBarHUD showLoading:@"正在努力加载数据..."];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8
- * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [CustomHUD showMessage:@"哈哈哈哈哈哈哈哈"];
-    });
+
     
 }
 - (IBAction)hideLoading:(id)sender {

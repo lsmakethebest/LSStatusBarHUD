@@ -10,7 +10,7 @@
 #define LSStatusBarHUDConst_h
 
 
-#define LSStatusBarHUDTest
+//#define LSStatusBarHUDTest
 
 
 #ifdef LSStatusBarHUDTest
